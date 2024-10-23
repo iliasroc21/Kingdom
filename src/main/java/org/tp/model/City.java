@@ -13,7 +13,6 @@ import java.util.List;
 public class City {
     private int soliders ;
     private int citizens;
-
     @Override
     public String toString() {
         return soliders+"-"+citizens ;

@@ -47,24 +47,6 @@ public class Map {
                 }
             }
         }
-//        for(Set<String> routes  : map.keySet()){
-//            int distance = map.get(routes);
-//            // iterate over all the countries in the strongest kingdom
-//            for(Country country : strongest.getCountries()){
-//                if(routes.contains(country.getCountryName())){
-//                    String otherCountry = routes.stream()
-//                            .filter(c -> !c.equals(country.getCountryName()))
-//                            .findFirst()
-//                            .orElse(null);
-//                    boolean otherCountryNotInStrongestKingdom = strongest.getCountries().stream()
-//                            .noneMatch(c -> c.getCountryName().equals(otherCountry));
-//                    if (otherCountry != null && !otherCountryNotInStrongestKingdom  && distance < shortestDistance) {
-//                        shortestDistance = distance;
-//                        nearestCountry = otherCountry;
-//                    }
-//                }
-//            }
-//        }
         return result;
     }
 }

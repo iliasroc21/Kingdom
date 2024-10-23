@@ -1,6 +1,7 @@
 package org.tp.builder;
 
 import lombok.NoArgsConstructor;
+import org.tp.factory.CountryFactory;
 import org.tp.model.City;
 import org.tp.model.Country;
 import org.tp.model.KingDom;
@@ -17,7 +18,10 @@ public class KingDomBuilder {
         return this;
     }
     public KingDomBuilder addCountry(String country ,String...cityData){
-        countries.add(new Country(country ).addCities(cityData));
+        CountryFactory factory= CountryFactory.getInstance();
+        Country newCountry = factory.create();
+        newCountry.setCountryName(country);
+        countries.add(newCountry.addCities(cityData));
         return this;
     }
     public KingDomBuilder addSoldiersOnEdges(String soldiersOnEdges){
